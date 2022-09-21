@@ -190,3 +190,13 @@ button {
     flex-direction: column;
   }
 }
+@media(min-width:701px){
+  .box-container{
+      width: 90%;
+      
+  }
+  .card{
+    flex-direction: column;
+    width: 30%;
+  }
+}

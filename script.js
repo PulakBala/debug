@@ -86,7 +86,6 @@ const gameOver = () => {
   `;
 
   addHistory(questionText, timeTaken, errorCount);
-
   // restart everything
   startTime = null;
   errorCount = 0;
@@ -140,8 +139,8 @@ displayHistory();
 // Show typing time spent
 setInterval(() => {
   const currentTime = new Date().getTime();
-  const timeSpent = (currentTime - startTime) / 1000;
-
-
-  document.getElementById("show-time").innerHTML = `${startTime?timeSpent : 0} seconds`;
+  const timeSpent =(currentTime - startTime) / 1000;
+  const timeCount = parseInt(timeSpent);
+  
+  document.getElementById("show-time").innerHTML = `${startTime?timeCount : 0} seconds`;
 }, 1000);
